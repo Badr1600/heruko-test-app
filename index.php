@@ -7,7 +7,7 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
 <html>
     <head><meta charset="UTF-8"></head>
     <body>
-        <h1>S3 upload example</h1>
+        <h1>Hello SOFE4630</h1>
 		
 		<a href="https://floating-beyond-79601.herokuapp.com/list.php">Files List</a>
 <?php
