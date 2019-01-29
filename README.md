@@ -1,6 +1,6 @@
-## Steps to Create and Deploy a Simple PHP application to manage file on AWS S3 using Heruko PaaS
-
 # heruko-test-app
+
+## Steps to Create and Deploy a Simple PHP application to manage file on AWS S3 using Heruko PaaS
 
 **Amazon S3 SDK Libirary** [Link](https://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.S3.S3Client.html)
 
