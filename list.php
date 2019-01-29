@@ -14,6 +14,7 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
 		foreach ($objects['Contents'] as $object){
 			echo "{$object['Key']}\t{$object['LastModified']}\n";
 		}
+		echo "test";
 ?>
     </body>
 </html>
