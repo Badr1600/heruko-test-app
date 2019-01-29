@@ -16,7 +16,7 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
 		));
 		foreach ($objects as $object) {
 			echo $object['Key'] . "<br>";
-			echo $object['ObjectURL'] . "<br>";
+			echo 'Download link would be: ', $s3->getObjectUrl($bucket, $object['Key']), "\n\n"; 
 		}
 ?>
 <?php } catch(Exception $e) { ?>
