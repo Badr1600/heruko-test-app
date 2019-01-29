@@ -11,7 +11,7 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
 		<h4>S3 Files</h4>
 <?php
 	try {
-		$objects = $s3->listObjectsV2(array("Bucket" => $bucket));
+		$objects = $s3->listObjectsV2(["Bucket" => $bucket]);
 		foreach ($objects['Contents'] as $object){
 			echo "{$object['Key']}\t{$object['LastModified']}\n";
 		}
