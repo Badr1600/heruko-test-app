@@ -10,7 +10,7 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
         <h1>S3 Download example</h1>
 <?php
 
-		$objects = $s3->listObjectsV2($bucket);
+		$objects = $s3->listObjectsV2(['Bucket' => 'elasticbeanstalk-us-east-1-536702249694']);
 		foreach ($objects['Contents'] as $object){
 			echo "{$object['Key']}\t{$object['LastModified']}\n";
 		}
