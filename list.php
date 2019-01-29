@@ -8,12 +8,15 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
     <head><meta charset="UTF-8"></head>
     <body>
         <h1>S3 Download example</h1>
-		<h4>S3 Files</h4>
+		<h3>S3 Files</h3>
 <?php
 	try {
-		$objects = $s3->listObjectsV2(["Bucket" => $bucket]);
-		foreach ($objects['Contents'] as $object){
-			echo "{$object['Key']}\t{$object['LastModified']}\n";
+		$objects = $s3->getIterator('ListObjects', array(
+			"Bucket" => $bucket
+		));
+		foreach ($objects as $object) {
+			echo $object['Key'] . "<br>";
+			echo $object['ObjectURL'] . "<br>";
 		}
 ?>
 <?php } catch(Exception $e) { ?>
