@@ -11,12 +11,13 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
 <?php
 
 		$objects = $s3->listObjectsV2(['Bucket' => 'elasticbeanstalk-us-east-1-536702249694']);
-		foreach ($objects['Contents'] as $object){
 ?>
-			<p> <? echo "{$object['Key']}\t{$object['LastModified']}\n"; ?> </p>
+		<h4>S3 Files</h4>
 <?php
+		echo "<p> Test </p>"
+		foreach ($objects['Contents'] as $object){
+			echo "Test <br>";
 		}
-		echo "test";
 ?>
     </body>
 </html>
