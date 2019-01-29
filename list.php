@@ -8,12 +8,10 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
     <head><meta charset="UTF-8"></head>
     <body>
         <h1>S3 Download example</h1>
-<?php
-
-		$objects = $s3->listObjectsV2(['Bucket' => 'elasticbeanstalk-us-east-1-536702249694']);
-?>
 		<h4>S3 Files</h4>
 <?php
+
+		$objects = $s3->listObjectsV2($bucket);
 		echo "<p> Test </p>";
 		foreach ($objects['Contents'] as $object){
 			echo "Test <br>";
