@@ -14,7 +14,7 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
 ?>
 		<h4>S3 Files</h4>
 <?php
-		echo "<p> Test </p>"
+		echo "<p> Test </p>";
 		foreach ($objects['Contents'] as $object){
 			echo "Test <br>";
 		}
