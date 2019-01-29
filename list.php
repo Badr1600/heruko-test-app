@@ -9,13 +9,11 @@ $bucket = getenv('S3_BUCKET')?: die('No "S3_BUCKET" config var in found in env!'
     <body>
         <h1>S3 Download example</h1>
 		<h4>S3 Files</h4>
+		echo "<p> Test </p>";
 <?php
 	try {
 		$objects = $s3->listObjectsV2($bucket);
 		echo "<p> Test </p>";
-		foreach ($objects['Contents'] as $object){
-			echo "Test <br>";
-		}
 ?>
 <?php } catch(Exception $e) { ?>
         <p>error :(</p>
