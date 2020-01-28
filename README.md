@@ -11,6 +11,7 @@
 **Install PHP 7.2**
 
  `sudo apt-get install php`
+ `sudo apt-get install php7.2-curl`
 
 **Install Composer**
 
