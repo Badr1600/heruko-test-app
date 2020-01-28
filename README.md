@@ -51,8 +51,6 @@
    
    **Ignore the generated git repo link for now, we will create our own repo later**
    
-   `sudo rm -rf .git`
-   
 6. Install the AWS SDK for PHP
 
    `composer require aws/aws-sdk-php:~2.6`
